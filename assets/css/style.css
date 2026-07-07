@@ -396,6 +396,16 @@ h1 {
   text-align: right;
 }
 
+.service-list li {
+  display: block;
+}
+
+.cv-note {
+  display: block;
+  margin-top: 0.18rem;
+  color: var(--color-muted);
+}
+
 .compact-list span,
 .news-list span {
   display: block;
