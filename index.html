@@ -127,7 +127,7 @@
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 320px;
+      grid-template-columns: minmax(0, 1fr) 280px;
       gap: 2rem;
       align-items: start;
       margin: 2rem 0 3rem;
@@ -138,25 +138,31 @@
       box-shadow: 0 16px 40px rgba(15, 23, 42, 0.05);
     }
 
+    .hero-main {
+      min-width: 0;
+    }
+
+    .hero-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .hero-title-text {
+      min-width: 0;
+    }
+
     .hero h1 {
       margin: 0 0 1rem;
-      font-size: clamp(2.1rem, 4vw, 3.2rem);
-      line-height: 1.15;
+      font-size: clamp(2.6rem, 5vw, 4rem);
+      line-height: 1.05;
       letter-spacing: -0.04em;
     }
 
-    .tagline {
-      max-width: 720px;
-      color: #344054;
-      font-size: 1.05rem;
-    }
-
-    .tagline p {
-      margin: 0 0 1rem;
-    }
-
     .hero-actions {
-      margin-top: 1.5rem;
+      margin-top: 0.75rem;
     }
 
     .button {
@@ -175,26 +181,40 @@
       opacity: 0.92;
     }
 
+    .contact-line {
+      margin: 0.65rem 0 0;
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .hero-photo {
+      flex: 0 0 auto;
+    }
+
+    .hero-photo img {
+      width: 240px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.14);
+    }
+
+    .tagline {
+      max-width: 720px;
+      color: #344054;
+      font-size: 1.05rem;
+    }
+
+    .tagline p {
+      margin: 0 0 1rem;
+    }
+
     .hero-side {
       padding: 1.25rem;
       background: #fafafa;
       border: 1px solid var(--border);
       border-radius: 18px;
-    }
-
-    .hero-photo {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 1.25rem;
-    }
-
-    .hero-photo img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
     }
 
     .bio-facts {
@@ -204,6 +224,11 @@
     .bio-facts div {
       padding: 0.9rem 0;
       border-top: 1px solid var(--border);
+    }
+
+    .bio-facts div:first-child {
+      border-top: 0;
+      padding-top: 0;
     }
 
     .bio-facts dt {
@@ -366,8 +391,15 @@
         padding: 1.5rem;
       }
 
-      .hero-side {
-        order: -1;
+      .hero-title-row {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+
+      .hero-photo img {
+        width: 200px;
+        height: 200px;
       }
 
       .section {
@@ -399,7 +431,7 @@
       }
 
       .hero h1 {
-        font-size: 2rem;
+        font-size: 2.35rem;
       }
 
       .tagline {
@@ -435,30 +467,34 @@
 
   <main id="main">
     <section class="hero">
-      <div class="hero-text">
-        <h1>余家庆</h1>
+      <div class="hero-main">
+        <div class="hero-title-row">
+          <div class="hero-title-text">
+            <h1>余家庆</h1>
+
+            <div class="hero-actions">
+              <a class="button" href="files/cv.pdf">CV (PDF)</a>
+
+              <p class="contact-line">
+                Contact:
+                <a href="mailto:jqyu21@m.fudan.edu.cn">jqyu21@m.fudan.edu.cn</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="hero-photo">
+            <img src="images/photo.jpg" alt="余家庆头像" width="240" height="240">
+          </div>
+        </div>
 
         <div class="tagline">
           <p>我研究家庭、劳动与文化变迁，主要方向包括家庭社会学、劳动社会学、文化社会学与因果推断方法。</p>
           <p>我的研究关注中国社会中的代际关系、家庭韧性、社会政策与不平等，尤其是老龄化、少子化与社会政策，养老服务与社会照顾，生育支持、儿童保护、妇女发展，留守流动儿童关爱，以及新就业和灵活就业人群权益保障等议题。</p>
         </div>
-
-        <div class="hero-actions">
-          <a class="button" href="files/cv.pdf">CV (PDF)</a>
-        </div>
       </div>
 
       <aside class="hero-side" aria-label="个人信息">
-        <div class="hero-photo">
-          <img src="images/photo.jpg" alt="余家庆头像" width="180" height="180">
-        </div>
-
         <dl class="bio-facts">
-          <div>
-            <dt>联系方式 (Contact)</dt>
-            <dd><a href="mailto:jqyu21@m.fudan.edu.cn">jqyu21@m.fudan.edu.cn</a></dd>
-          </div>
-
           <div>
             <dt>现职 (Current Position)</dt>
             <dd>讲师，广州大学公共管理学院，社会学系，2026–至今</dd>
@@ -719,6 +755,24 @@
           </div>
         </article>
       </div>
+
+      <h3>媒体采访 (Media Interviews)</h3>
+<div class="paper-list">
+  <article class="paper">
+    <div class="paper-main">
+      <h4>
+        <a href="https://mp.weixin.qq.com/s?src=11&amp;timestamp=1783427259&amp;ver=6828&amp;signature=AjlqdsC4e01fBJqf4U6i87uWasRVzs9oMG-*5awF5yOBw7NPrABsF-t7FEYsF0j9L*ds2hr090JFdIWggOTIcB808lkaaB2xvJ7sB1EWO*99ZlsyTgeW9R9lkgTQUnEy&amp;new=1" target="_blank" rel="noreferrer">
+          Easing constraints of foreign spouses can help solve gender imbalance, but risks, uncertainties remain
+        </a>
+      </h4>
+      <p class="meta">2020. <em>Global Times</em>.</p>
+    </div>
+    <div class="paper-tags">
+      <span class="badge">INTERVIEW</span>
+    </div>
+  </article>
+</div>
+
     </section>
 
     <section class="section" id="service">
