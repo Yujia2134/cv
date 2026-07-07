@@ -142,9 +142,9 @@ main {
 
 .hero-photo img {
   display: block;
-  width: 180px;
+  width: 230px;
   height: 230px;
-  border-radius: 8px;
+  border-radius: 50%;
   object-fit: cover;
   border: 6px solid var(--color-surface);
   box-shadow: var(--shadow-soft);
@@ -205,7 +205,7 @@ h1 {
 }
 
 .tagline {
-  margin: 1rem 0 0;
+  margin: 2.4rem 0 0;
   max-width: 36rem;
   font-size: 1.1rem;
 }
@@ -324,16 +324,27 @@ h1 {
   font-size: 1rem;
   line-height: 1.45;
   font-weight: 500;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.4rem;
 }
 
 .badge {
-  margin-left: 0.4rem;
+  margin-left: 0;
   padding: 0.12rem 0.45rem;
   transform: translateY(-0.06rem);
   font-size: 0.68rem;
   text-transform: uppercase;
   letter-spacing: 0;
   white-space: nowrap;
+}
+
+.paper h4 .badge {
+  flex: 0 0 auto;
+}
+
+.paper h4 .badge:first-of-type {
+  margin-left: auto;
 }
 
 .paper .meta {
@@ -368,8 +379,21 @@ h1 {
 }
 
 .cv-list li {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
   color: var(--color-text);
+}
+
+.cv-entry {
+  min-width: 0;
+}
+
+.cv-date {
+  flex: 0 0 auto;
+  color: var(--color-muted);
+  white-space: nowrap;
+  text-align: right;
 }
 
 .compact-list span,
@@ -457,8 +481,8 @@ h1 {
   }
 
   .hero-photo img {
-    width: 145px;
-    height: 185px;
+    width: 180px;
+    height: 180px;
   }
 
   .facts,
@@ -469,6 +493,11 @@ h1 {
 
   .section {
     padding-top: 3.2rem;
+  }
+
+  .cv-list li {
+    align-items: flex-start;
+    gap: 1rem;
   }
 
   .site-footer {
