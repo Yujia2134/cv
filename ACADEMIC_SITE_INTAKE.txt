@@ -1,0 +1,128 @@
+============================================================
+  BUILD MY ACADEMIC WEBSITE — INFORMATION FORM
+============================================================
+
+HOW TO FILL THIS OUT
+  - Type your answer on the line after each question (after the ">").
+  - Leave anything you don't have, or don't want, blank. That's fine.
+  - You don't need to delete or reword anything. Just fill in what you can.
+  - When you're done, save the file and hand it to your AI assistant
+    (the last few lines tell it what to do).
+
+There are two ways to fill this out — pick whichever is less work:
+  - STARTING FROM SCRATCH: answer the questions in Part 1.
+  - YOU ALREADY HAVE A WEBSITE: skip most of Part 1 — just put your
+    current website's address in Part 2, and your assistant will pull
+    your content from it. Use Part 1 only to add or correct things.
+
+
+------------------------------------------------------------
+  PART 1 — ABOUT YOU
+------------------------------------------------------------
+
+Name:
+>
+
+Title / position (e.g., "Assistant Professor of Political Science"):
+>
+
+Institution:
+>
+
+Short homepage intro — 2 to 4 sentences, written about you in the third
+person. This is the brief welcome at the very top of your homepage:
+>
+
+Full bio — a longer narrative for your Bio / C.V. page (career, research
+interests, main contributions). Can be several paragraphs:
+>
+
+Email / contact info:
+>
+
+Photo — attach the image file when you talk to your assistant, or paste
+a link to your institutional headshot:
+>
+
+Publications — attach a BibTeX file or your C.V. (PDF), or paste a list:
+>
+
+Presentations / talks — attach or paste:
+>
+
+Software projects (if any):
+>
+
+Datasets (if any):
+>
+
+Teaching — courses you've taught (if any):
+>
+
+Research group / lab members — names and roles, if you have a group:
+>
+
+Research areas / topics — list 3 to 8:
+>
+
+Anything else you'd like on the site (media, consulting, startups, etc.):
+>
+
+
+------------------------------------------------------------
+  PART 2 — IF YOU ALREADY HAVE A WEBSITE (optional)
+------------------------------------------------------------
+
+Address of my current website:
+>
+
+Anything on the old site to change, drop, or reorganize:
+>
+
+
+------------------------------------------------------------
+  A DESIGN YOU LIKE (optional)
+------------------------------------------------------------
+
+Paste a link to any website whose design you like — your assistant will
+use it as the visual model for your site:
+>
+
+
+------------------------------------------------------------
+  VISIBILITY & CREDIT (optional — leave as-is to keep the defaults)
+------------------------------------------------------------
+
+Your site comes with two small, optional touches. Both are on by default and
+easy to change now or later (just ask your assistant). To turn one off, change
+its [x] to [ ].
+
+  [x] Footer credit — a small, tasteful "Created using GaryKing.org/mysite"
+      line in the bottom-right corner of every page.
+
+  [x] Directory listing — an invisible marker in your page's source
+      code. Visitors never see it and it collects nothing about you; it simply
+      lets us find your site and feature it in our directory at
+      GaryKing.org/mysite, which also helps search engines discover your work.
+
+  To change either later, copy and paste the following to your agent, then
+  ask it to "preview," and "publish" once you're satisfied:
+    - "Turn the GaryKing.org/mysite footer credit off (set
+       params.mysite.credit to false)."   Say "on" / true to put it back.
+    - "Turn the GaryKing.org/mysite invisible marker off (set
+       params.mysite.discovery to false)."   Say "on" / true to put it back.
+
+
+============================================================
+  FOR YOUR AI ASSISTANT — you don't need to read this part
+============================================================
+
+Build instructions are here:
+https://gking.harvard.edu/mysite/files/ACADEMIC_SITE_PROMPT.md
+
+Fetch that page and follow it exactly, using my answers above as the
+content. Honor the Visibility & credit choices above: set
+params.mysite.credit to true if "Footer credit" is checked or false if it is
+unchecked, and set params.mysite.discovery to true if "Directory listing" is
+checked or false if it is unchecked. Build a local preview and show it to me
+before anything goes public.
