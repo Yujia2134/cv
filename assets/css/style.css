@@ -400,6 +400,12 @@ h1 {
   display: block;
 }
 
+.service-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
 .cv-note {
   display: block;
   margin-top: 0.18rem;
@@ -507,6 +513,10 @@ h1 {
 
   .cv-list li {
     align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .service-main {
     gap: 1rem;
   }
 
