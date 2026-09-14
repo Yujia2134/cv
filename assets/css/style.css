@@ -323,18 +323,20 @@ h1 {
 }
 
 .paper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 1rem;
+  align-items: start;
   padding: 1rem 0;
   border-top: 0;
 }
 
 .paper h4 {
-  margin: 0 0 0.25rem;
+  margin: 0;
   font-size: 1rem;
   line-height: 1.45;
   font-weight: 500;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.4rem;
+  grid-column: 1;
 }
 
 .badge {
@@ -363,8 +365,13 @@ h1 {
 
 .journal-list .paper,
 .citation-list .paper {
-  padding: 0;
+  padding: 0.65rem 0;
   margin: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.journal-list .paper:first-child,
+.citation-list .paper:first-child {
   border-top: 0;
 }
 
@@ -386,8 +393,10 @@ h1 {
   justify-content: flex-end;
   flex-wrap: wrap;
   gap: 0.32rem;
-  margin-top: 0.12rem;
+  margin: 0;
   line-height: 1.2;
+  grid-column: 2;
+  align-self: start;
 }
 
 .tag-row .badge {
@@ -411,7 +420,7 @@ h1 {
 
 .stat-summary {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   margin-bottom: 1.2rem;
 }
@@ -497,8 +506,15 @@ h1 {
 .cv-list li,
 .news-list li,
 .teaching-item {
-  padding: 0;
+  padding: 0.65rem 0;
   margin: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.compact-list li:first-child,
+.cv-list li:first-child,
+.news-list li:first-child,
+.teaching-item:first-child {
   border-top: 0;
 }
 
@@ -508,11 +524,29 @@ h1 {
 }
 
 .cv-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 1.5rem;
+  row-gap: 0.2rem;
+  align-items: start;
   color: var(--color-text);
   line-height: 1.5;
+}
+
+.cv-list li > .cv-entry {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.cv-list li > .cv-date {
+  grid-column: 2;
+  justify-self: end;
+  text-align: right;
+}
+
+.cv-list li > .cv-note {
+  grid-column: 1 / -1;
+  grid-row: 2;
 }
 
 .cv-entry {
@@ -520,7 +554,6 @@ h1 {
 }
 
 .cv-date {
-  flex: 0 0 auto;
   color: var(--color-muted);
   white-space: nowrap;
   font-weight: 700;
