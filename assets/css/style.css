@@ -1,12 +1,12 @@
 :root {
-  --color-bg: #fdfbf8;
-  --color-surface: #f5f0eb;
-  --color-text: #2d2926;
-  --color-muted: #6b6560;
-  --color-accent: #5c7a8a;
-  --color-accent-hover: #3d5a6a;
-  --color-border: #e2ddd5;
-  --color-highlight: #f0ebe3;
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-text: #000000;
+  --color-muted: #333333;
+  --color-accent: #111111;
+  --color-accent-hover: #000000;
+  --color-border: #d8d8d8;
+  --color-highlight: #ffffff;
   --shadow-soft: 0 18px 50px rgba(55, 48, 42, 0.07);
   --nav-height: 68px;
 }
@@ -57,7 +57,7 @@ a:focus {
   position: sticky;
   top: 0;
   z-index: 5;
-  background: rgba(253, 251, 248, 0.96);
+  background: rgba(255, 255, 255, 0.96);
   border-bottom: 1px solid var(--color-border);
   backdrop-filter: blur(12px);
 }
@@ -156,7 +156,7 @@ main {
 
 .bio-facts div {
   padding: 0.85rem 0;
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .bio-facts dt {
@@ -264,8 +264,12 @@ h1 {
 }
 
 .section h3 {
-  margin: 2rem 0 0.75rem;
-  font-size: 1.05rem;
+  margin: 2.15rem 0 0.85rem;
+  padding-left: 0.65rem;
+  border-left: 3px solid var(--color-text);
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 .prose p {
@@ -320,7 +324,7 @@ h1 {
 
 .paper {
   padding: 1rem 0;
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .paper h4 {
@@ -341,16 +345,54 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 0;
   white-space: nowrap;
+  font-weight: 700;
 }
 
 .paper h4 .badge {
   flex: 0 0 auto;
 }
 
-.paper h4 .badge:first-of-type {
-  margin-left: auto;
+.journal-list,
+.citation-list {
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: #ffffff;
+  line-height: 1.5;
 }
 
+.journal-list .paper,
+.citation-list .paper {
+  padding: 0;
+  margin: 0;
+  border-top: 0;
+}
+
+.journal-list .paper:last-child,
+.citation-list .paper:last-child {
+  margin-bottom: 0;
+}
+
+.journal-list .paper h4,
+.citation-list .paper h4 {
+  display: block;
+  margin: 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.tag-row {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 0.32rem;
+  margin-top: 0.12rem;
+  line-height: 1.2;
+}
+
+.tag-row .badge {
+  margin-left: 0;
+}
 .paper .meta {
   margin: 0;
 }
@@ -361,7 +403,10 @@ h1 {
 }
 
 .stats-card {
-  padding: 1.1rem 0 0;
+  padding: 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: #ffffff;
 }
 
 .stat-summary {
@@ -373,7 +418,7 @@ h1 {
 
 .stat-summary div {
   padding: 0.9rem 0;
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .stat-summary strong {
@@ -441,15 +486,25 @@ h1 {
 .news-list {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 0.7rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: #ffffff;
+  line-height: 1.5;
 }
 
 .compact-list li,
 .cv-list li,
 .news-list li,
 .teaching-item {
-  padding: 0.9rem 0;
-  border-top: 1px solid var(--color-border);
+  padding: 0;
+  margin: 0;
+  border-top: 0;
+}
+
+.cv-list li:last-child,
+.news-list li:last-child {
+  margin-bottom: 0;
 }
 
 .cv-list li {
@@ -457,6 +512,7 @@ h1 {
   justify-content: space-between;
   gap: 1.5rem;
   color: var(--color-text);
+  line-height: 1.5;
 }
 
 .cv-entry {
@@ -467,6 +523,7 @@ h1 {
   flex: 0 0 auto;
   color: var(--color-muted);
   white-space: nowrap;
+  font-weight: 700;
   text-align: right;
 }
 
@@ -478,6 +535,10 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
+}
+
+.service-list .cv-note {
+  line-height: 1.5;
 }
 
 .cv-note {
@@ -510,6 +571,42 @@ h1 {
   color: var(--color-muted);
 }
 
+
+.copy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.55rem;
+  height: 1.55rem;
+  margin-left: 0.45rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-bg);
+  color: var(--color-muted);
+  cursor: pointer;
+  vertical-align: text-bottom;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.copy-button:hover,
+.copy-button:focus {
+  color: var(--color-accent-hover);
+  border-color: var(--color-accent);
+  background: var(--color-surface);
+}
+
+.copy-button svg {
+  width: 0.86rem;
+  height: 0.86rem;
+  pointer-events: none;
+}
+
+.copy-button.is-copied {
+  color: #fff;
+  border-color: var(--color-accent);
+  background: var(--color-accent);
+}
+
 .site-footer {
   max-width: 820px;
   margin: 0 auto;
@@ -519,7 +616,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  border-top: 1px solid var(--color-border);
+  border-top: 0;
 }
 
 .site-footer p {
@@ -600,6 +697,10 @@ h1 {
     gap: 1rem;
   }
 
+.service-list .cv-note {
+  line-height: 1.5;
+}
+
   .site-footer {
     display: block;
   }
@@ -614,3 +715,21 @@ h1 {
     scroll-behavior: auto;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
